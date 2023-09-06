@@ -2,11 +2,18 @@ package com.simpletask.task.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.simpletask.task.R
+import androidx.navigation.fragment.NavHostFragment
+import com.simpletask.task.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
     }
 }
