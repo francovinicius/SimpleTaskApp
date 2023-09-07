@@ -53,6 +53,7 @@
 
             <EditText
                 android:id="@+id/edtEmail"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,6 +72,7 @@
 
             <EditText
                 android:id="@+id/edtPassword"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
