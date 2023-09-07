@@ -20,10 +20,12 @@
             android:text="Email"
             android:textColor="@color/white"/>
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit"
             android:padding="12dp"
+            android:inputType="textEmailAddress"
             android:layout_marginTop="8dp"
             android:hint="email@email.com"
             android:textSize="14sp"/>
@@ -35,15 +37,18 @@
             android:layout_marginTop="16dp"
             android:textColor="@color/white"/>
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit"
             android:padding="12dp"
+            android:inputType="textPassword"
             android:layout_marginTop="8dp"
             android:hint="******"
             android:textSize="14sp"/>
         
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -84,6 +89,14 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/white"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            />
     </LinearLayout>
 
 
