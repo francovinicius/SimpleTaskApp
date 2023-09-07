@@ -52,6 +52,8 @@
                 android:textColor="@color/white" />
 
             <EditText
+                android:id="@+id/edtEmail"
+                android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -68,6 +70,8 @@
                 android:textColor="@color/white" />
 
             <EditText
+                android:id="@+id/edtPassword"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -77,6 +81,7 @@
                 android:textSize="14sp" />
 
             <Button
+                android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -85,6 +90,15 @@
                 android:textColor="@color/bg"
                 app:backgroundTint="@null" />
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:indeterminateTint="@color/white"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
 
         </LinearLayout>
 
