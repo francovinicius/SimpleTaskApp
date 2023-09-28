@@ -4,9 +4,12 @@
         <item name="android:background">@color/bg</item>
         <item name="colorPrimary">@color/bg</item>
         <item name="colorPrimaryDark">@color/bg</item>
+    </style>
 
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="CustomTabLayout" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Theme.SimpleTask" parent="Base.Theme.SimpleTask" />
