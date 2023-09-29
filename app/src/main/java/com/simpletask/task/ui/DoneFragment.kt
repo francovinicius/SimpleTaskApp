@@ -5,15 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.auth.FirebaseAuth
 import com.simpletask.task.R
+import com.simpletask.task.databinding.FragmentDoingBinding
+import com.simpletask.task.databinding.FragmentDoneBinding
+
 class DoneFragment : Fragment() {
 
+    private var _binding: FragmentDoneBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_done, container, false)
+        _binding = FragmentDoneBinding.inflate(inflater, container, false)
+        return binding.root
     }
-
+}
 }
