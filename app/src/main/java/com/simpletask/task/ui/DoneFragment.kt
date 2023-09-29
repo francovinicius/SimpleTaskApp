@@ -24,4 +24,3 @@ class DoneFragment : Fragment() {
         return binding.root
     }
 }
-}
