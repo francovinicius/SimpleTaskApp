@@ -8,6 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.simpletask.task.R
 import com.simpletask.task.databinding.FragmentSplashBinding
 
@@ -15,6 +18,8 @@ class SplashFragment: Fragment(){
 
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,12 +33,19 @@ class SplashFragment: Fragment(){
 
         //determinar tempo pra tela inicial ficar visivel
         Handler(Looper.getMainLooper()).postDelayed(this::checkAuth, 2000)
+
     }
 
 
     //verificar se o usuário está logado
     private fun checkAuth() {
-        findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+        auth = Firebase.auth
+        if (auth.currentUser == null) {
+            findNavController().navigate(R.id.action_splashFragment_to_autentication)
+        }else {
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+        }
+
     }
 
     override fun onDestroyView() {
