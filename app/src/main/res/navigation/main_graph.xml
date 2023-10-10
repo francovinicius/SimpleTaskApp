@@ -25,7 +25,14 @@
         android:id="@+id/homeFragment"
         android:name="com.simpletask.task.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_autentication"
+            app:destination="@id/autentication"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/homeFragment"/>
+
+    </fragment>
     <navigation android:id="@+id/autentication"
         app:startDestination="@id/loginFragment">
         <fragment
